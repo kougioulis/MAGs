@@ -183,7 +183,7 @@ E.g The path $X-Y-Z$ is blocked by $\mathbf{Y}$, $Y-Z-V$ is blocked by $\mathbf{
 \end{frame}
 
 \begin{frame}{d-separation criterion}
-	\begin{definition}Two nodes $X$ and $Y$ are d-separated by $\mathbf{Z}$ if-f every path from $X$ to $Y$ is blocked by $\mathbf{Z}$. Otherwise, we say they are \textbf{d-connected}.
+	\begin{definition}Two nodes $X$ and $Y$ are d-separated by $\mathbf{Z}$ iff every path from $X$ to $Y$ is blocked by $\mathbf{Z}$. Otherwise, we say they are \textbf{d-connected}.
 	\end{definition}	
 \end{frame}
 
@@ -688,7 +688,7 @@ Example: For the ancestral graph $A \rightarrow B \leftarrow C \leftarrow D$:
 \begin{frame}{DAGs to MAGs}
 	A property of MAGs is that they represent the marginal independence models of a DAG over $\mathbf{V} = \mathbf{O} \cup \mathbf{L}$. \\
 		
-	This means that given any DAG $\mathcal{D}$ over $\mathbf{V} = \mathbf{O}\cup \mathbf{L}$ there is a MAG $\mathcal{M}$ over $\mathbf{O}$ alone, such that for any disjoint sets $\mathbf{X, Y, Z \subset O, X}$ and $\mathbf{Y}$ are d-separated by $\mathbf{Z}$ in $\mathcal{D}$ if-f they are m-separated by $\mathbf{Z}$ in the MAG $\mathcal{M}$. \\
+	This means that given any DAG $\mathcal{D}$ over $\mathbf{V} = \mathbf{O}\cup \mathbf{L}$ there is a MAG $\mathcal{M}$ over $\mathbf{O}$ alone, such that for any disjoint sets $\mathbf{X, Y, Z \subset O, X}$ and $\mathbf{Y}$ are d-separated by $\mathbf{Z}$ in $\mathcal{D}$ iff they are m-separated by $\mathbf{Z}$ in the MAG $\mathcal{M}$. \\
 		
 	This can be cosntructed with the following algorithm:
 \end{frame}
@@ -701,7 +701,7 @@ Example: For the ancestral graph $A \rightarrow B \leftarrow C \leftarrow D$:
 			\Require A DAG $\mathcal{D}$ over $\mathbf{O} \cup \mathbf{L}$
 			\Ensure A MAG $\mathcal{M}_\mathcal{D}$ over $\mathbf{O}$
 			\ForAll{pairs of variables $X, Y \in \mathbf{O}$}
-			\State $\mathcal{M}$ is adjacent to $X$ and $Y$ if-f there is an inducing path between them relative to $\mathbf{L}$ in $\mathcal{D}$
+			\State $\mathcal{M}$ is adjacent to $X$ and $Y$ iff there is an inducing path between them relative to $\mathbf{L}$ in $\mathcal{D}$
 			\EndFor
 			\ForAll{pairs of adjacent variables $X, Y$ in $\mathcal{M}$}
 			\If{$X$ is an ancestor of $Y$ in $\mathcal{D}$}
