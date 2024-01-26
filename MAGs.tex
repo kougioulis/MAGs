@@ -1,6 +1,5 @@
 \documentclass[english, compress, red]{beamer}
 
-
 \usetheme{Warsaw}
 \usecolortheme{lily}
 \useoutertheme[subsection=false]{smoothbars}
@@ -26,7 +25,6 @@
 
 \usepackage{algorithm}
 \usepackage{algpseudocode}
-
 
 \usepackage[sort, round]{natbib}
 \bibliographystyle{plainnat}
@@ -429,7 +427,7 @@ E.g The path $X-Y-Z$ is blocked by $\mathbf{Y}$, $Y-Z-V$ is blocked by $\mathbf{
 			\item every collider on $\pi$ is an ancestor of some member of $\mathbf{Z}$
 		\end{itemize}
 	Otherwise we say that $\mathbf{Z}$ \textbf{blocks} $\pi$.
-	\end{definition}\
+	\end{definition}
 
 Example: For the ancestral graph $A \rightarrow B \leftrightarrow C \leftarrow D$:
 \begin{itemize}
@@ -523,7 +521,7 @@ Example: For the ancestral graph $A \rightarrow B \leftarrow C \leftarrow D$:
 			\end{tikzpicture}
 		\end{column}
 	     \begin{column}{0.7\textwidth}
-	     	To show that the AG is indeed maximal, notice that the only pair of non-adjacent vertices is $(Y,W)$.
+	     	To show that the left AG is not maximal, notice that the only pair of non-adjacent vertices is $(Y,W)$.
 	     	\begin{itemize}
 	     		\item $\mathbf{Z} = \left\{ X\right\}$, $\pi_1$ is \textit{not an active path} since $Z \not \in \textbf{an}(X)$ but $\pi_2 = (Y,Z,W)$ is active since there are no colliders in $\pi_2$, $Z$ is a non-collider for $\pi_2$ and $Z \not \in \mathbf{Z}$
 	     		\item For $\mathbf{Z} = \left\{ X, Z\right\}$, $\pi_1 = (Y,X,Z,W)$ is a path that m-connects $Y$ and $W$.
